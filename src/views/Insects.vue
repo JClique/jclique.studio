@@ -1,6 +1,12 @@
 <template>
   <div class="content">
-    <h1>This is a insects page</h1>
+    <img src="@/assets/insects/goliath beetle.jpg" class="art">
+    <img src="@/assets/insects/hercules beetle.jpg" class="art">
+    <img src="@/assets/insects/rhinoceros beetle.jpg" class="art">
+    <img src="@/assets/insects/rhinoceros beetle 2.jpg" class="art">
+    <img src="@/assets/insects/scarab beetle 2.jpg" class="art">
+    <img src="@/assets/insects/scarab beetle.jpg" class="art">
+    <img src="@/assets/insects/stag beetle.jpg" class="art">
   </div>
 </template>
 
