@@ -1,5 +1,5 @@
 <template lang="html">
-  <footer>Website designed, built & hosted by me - <router-link to="/contact">Get in touch</router-link> to talk websites</footer>
+  <footer>This website was designed, built & hosted by me - <router-link to="/contact">Get in touch</router-link> to talk websites</footer>
 </template>
 
 <script>

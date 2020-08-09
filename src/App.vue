@@ -70,7 +70,10 @@ body {
 a {
   text-decoration: none;
   font-family: 'Bitter', serif;
+  color: black;
 }
+a:hover, a:active { color:grey }
+a:focus { color:darkgrey; }
 
 .content {
   box-sizing: border-box;
@@ -138,6 +141,14 @@ button:focus {
 
 button:active {
   outline: none;
+}
+
+h4 {
+  text-align: left;
+}
+
+hr {
+  margin-bottom: 2rem;
 }
 
 .router-enter-active, .router-leave-active {

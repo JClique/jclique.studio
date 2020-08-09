@@ -1,6 +1,6 @@
 <template lang="html">
   <form action="https://getform.io/f/664217c2-97ee-4421-a3f6-08d5b06be940" method="post">
-    <h2>Contact Me</h2>
+    <h2>Contact</h2>
 
     <input class="input" type="email" name="email" placeholder="Your Contact Email...">
 
