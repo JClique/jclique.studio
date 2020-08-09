@@ -4,7 +4,7 @@
     <img src="@/assets/code/datadash.jpg" class="art">
     <div class="desc">
       <p>
-        Data-dash is an excercise in rendering data using Scalable Vector Graphics (SVGs).
+        Data-dash is an exercise in rendering data using Scalable Vector Graphics (SVGs).
         A random dataset is generated and fed into a method that calculates the plots, angles and lines necessary to produce the resulting chart.
       </p>
       <p>
@@ -23,7 +23,7 @@
     <div class="desc">
       <p>
         Helveticalc is a simple interactive front-end application experimenting in javascript methods to replicate basic calculator functionality.
-        The design is inspired by Apple's dekstop and iOS Calc appliactions, and Mac Miedinger's famous sans-serif font Helvetica.
+        The design is inspired by Apple's desktop and iOS Calc applications, and Mac Miedinger's famous sans-serif font Helvetica.
       </p>
       <a href="https://bit.ly/j_clique-Helveticalc">
         <button type="button" name="button">View Demo</button>
