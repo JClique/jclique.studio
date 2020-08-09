@@ -5,17 +5,20 @@
     <transition name="router">
       <router-view/>
     </transition>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Nav from '@/components/Nav.vue'
 import Menu from '@/components/Menu.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
     Nav,
-    Menu
+    Menu,
+    Footer
   },
   methods: {
     toggleMenu() {
@@ -34,7 +37,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Raleway&display=swap');
 
 #app {
-  height: 110vh;
   max-width: 100vw;
 }
 
@@ -74,9 +76,11 @@ a {
   box-sizing: border-box;
   max-width: 100%;
   width: 1000px;
-  margin: 7rem auto;
+  min-height: 93vh;
+  margin: auto;
   text-align: center;
-  padding: 1rem;
+  padding: 0 1rem;
+  padding-top: 120px;
 }
 
 .content h2 {
@@ -99,12 +103,13 @@ img.art {
   text-align: justify;
 }
 
-.desc button {
+button {
   outline: 2px solid black;
   outline-offset: 2px;
   appearance: none;
   border: none;
   padding: .5rem 1.5rem;
+  margin: .5rem 1rem;
   background-color: transparent;
   font-family: 'Bitter', serif;
   font-weight: 900;
@@ -112,21 +117,26 @@ img.art {
   transition-property: background-color, color;
 }
 
-.desc button::before {
+button::before {
   content: '--';
   padding-right: .5rem;
 }
-.desc button::after {
+button::after {
   content: '--';
   padding-left: .5rem;
 }
 
-.desc button:hover {
+button:hover {
   background-color: black;
   color: white;
 }
 
-.desc button:active {
+button:focus {
+  border: 1px solid grey;
+  outline-offset: 1px;
+}
+
+button:active {
   outline: none;
 }
 

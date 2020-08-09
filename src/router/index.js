@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -8,32 +7,42 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('@/views/Home.vue')
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/About.vue')
+    component: () => import('@/views/About.vue')
   },
   {
     path: '/people',
     name: 'People',
-    component: () => import('../views/People.vue')
+    component: () => import('@/views/People.vue')
   },
   {
     path: '/insects',
     name: 'Insects',
-    component: () => import('../views/Insects.vue')
+    component: () => import('@/views/Insects.vue')
   },
   {
     path: '/texture',
     name: 'Texture',
-    component: () => import('../views/Texture.vue')
+    component: () => import('@/views/Texture.vue')
   },
   {
     path: '/code',
     name: 'Code',
-    component: () => import('../views/Code.vue')
+    component: () => import('@/views/Code.vue')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('@/views/Contact.vue')
+  },
+  {
+    path: '/contact/confirmed',
+    name: 'ConfirmContact',
+    component: () => import('@/components/ConfirmContact.vue')
   }
 ]
 
