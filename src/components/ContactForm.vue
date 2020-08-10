@@ -19,9 +19,9 @@ export default {
 
 <style scoped>
   form {
-    max-width: 100%;
-    width: 600px;
+    max-width: 600px;
     margin: auto;
+    padding-right: 1rem;
   }
 
   .input {
@@ -35,7 +35,8 @@ export default {
   }
 
   input {
-    width: 400px;
+    max-width: 100%;
+    width: 500px;
     margin: 1rem auto;
   }
 
