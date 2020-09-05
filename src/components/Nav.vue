@@ -35,8 +35,8 @@
         </a>
       </li>
       <li class="mobile">
-        <img src="@/assets/menu.svg" class="menu" @click="$emit('toggleMenu')">
-        <img src="@/assets/menu-close.svg" class="menu" @click="$emit('toggleMenu')" style="display: none;">
+        <img src="@/assets/menu.svg" class="menu" @click="$emit('toggleMenu')" v-if="!showMenu">
+        <img src="@/assets/menu-close.svg" class="menu" @click="$emit('toggleMenu')" v-if="showMenu">
       </li>
     </ul>
   </nav>
@@ -44,7 +44,8 @@
 
 <script>
 export default {
-  name: 'Nav'
+  name: 'Nav',
+  props: ['showMenu',]
 }
 </script>
 

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <Nav @toggleMenu="toggleMenu" />
-    <Menu @toggleMenu="toggleMenu" />
+    <Nav @toggleMenu="toggleMenu" :showMenu="showMenu"/>
+    <transition name="grow">
+      <Menu @toggleMenu="toggleMenu" :showMenu="showMenu"/>
+    </transition>
     <transition name="router">
       <router-view/>
     </transition>
@@ -10,9 +12,9 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue'
-import Menu from '@/components/Menu.vue'
-import Footer from '@/components/Footer.vue'
+import Nav from '@/components/Nav.vue';
+import Menu from '@/components/Menu.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components: {
@@ -20,12 +22,23 @@ export default {
     Menu,
     Footer
   },
+  data() {
+    return {
+      showMenu: false,
+    }
+  },
   methods: {
     toggleMenu() {
-      var menu = document.getElementsByClassName("menu");
-      for (var i = 0; i < menu.length; i++) {
-        menu.item(i).style.display = menu.item(i).style.display === 'none' ? '' : 'none';
-      }
+
+      // remove scroll from body when menu is visible
+      var delay = 500
+      if (this.showMenu) { delay = 0 }
+      setTimeout(function() { // delay prevents shifting of body width due to scrollbar dissapear
+        var body = document.getElementsByTagName("body")[0];
+        body.style.position = body.style.position === 'fixed' ? '' : 'fixed';
+      }, delay)
+
+      this.showMenu = !this.showMenu;
     }
   }
 }
@@ -161,6 +174,37 @@ hr {
 
 .router-enter, .router-leave-to {
   opacity: 0;
+}
+
+.grow-enter-active, .grow-leave-active {
+	visibility: visible;
+	animation-name: growIn;
+	animation-duration: .5s;
+	transform-origin: 50% 0%;
+}
+
+.grow-enter, .grow-leave-to {
+	visibility: hidden;
+	animation-name: growOut;
+	animation-duration: .3s;
+}
+
+@keyframes growIn {
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes growOut {
+	from {
+		transform: scaleY(1);
+	}
+	to {
+		transform: scaleY(0);
+	}
 }
 
 </style>

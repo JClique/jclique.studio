@@ -1,5 +1,5 @@
 <template lang="html">
-  <ul class="menu" style="display: none;">
+  <ul class="menu" v-if="showMenu">
     <li class="link" @click="$emit('toggleMenu')">
       <router-link to="/about">About</router-link>
     </li>
@@ -31,7 +31,8 @@
 
 <script>
 export default {
-  name: 'Menu'
+  name: 'Menu',
+  props: ['showMenu',]
 }
 </script>
 
