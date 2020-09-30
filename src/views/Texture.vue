@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <img src="@/assets/texture/texture6.jpg" class="art">
     <img src="@/assets/texture/texture4.jpg" class="art">
     <img src="@/assets/texture/texture1.jpg" class="art">
     <img src="@/assets/texture/texture5.jpg" class="art">
