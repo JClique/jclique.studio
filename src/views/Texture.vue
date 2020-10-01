@@ -5,6 +5,7 @@
     <img src="@/assets/texture/texture1.jpg" class="art">
     <img src="@/assets/texture/texture5.jpg" class="art">
     <img src="@/assets/texture/texture2.jpg" class="art">
+    <img src="@/assets/texture/texture7.jpg" class="art">
     <img src="@/assets/texture/texture3.jpg" class="art">
   </div>
 </template>
